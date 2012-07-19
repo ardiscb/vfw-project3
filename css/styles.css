@@ -1,6 +1,6 @@
 /*
 Author: Courtney Ardis 
-Project: Web App Part 2
+Project: Web App Part 3
 Term: 1207
 */
 
@@ -9,9 +9,13 @@ Term: 1207
 /* Section comments indicate where the selectors come from even though the style applies to all elements on the page(s) in which the stylesheet is linked */
 /* Where the text "ONLY" is used in the comments, indicates the exact element the selector is styling and where it is located */
 
+/* everything on both the index.html and addItem.html page is styled with the properties below*/
+*{
+	font-family: Arial, Helvetica, serif;
+}
+
 /* body element on both the index.html and addItem.hmtl page */
 body{
-	font-family: Arial, Helvetica, serif;
 	background-color: #999;
 	letter-spacing: .07em;
 }
@@ -31,6 +35,20 @@ h1{
 	border-bottom: 1px solid black;
 }
 
+#errors{
+	color: red;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-bottom: 15px;
+	text-indent: -70px;
+}
+
+#required{
+	font-size: 7pt;
+	margin-bottom: 15px;
+	color: red;
+}
+
 /* fieldset element within the comicForm on the addItem.html page */
 fieldset{
 	background-color: #D3D3D3;
@@ -46,8 +64,8 @@ legend{
 	box-shadow: 5px 5px 5px #888;
 }
 
-/* ul element within the fieldset on the addItem.html page */
-ul{
+/* ul element with a class="mainUl" on the addItem.html page */
+.mainUl{
 	list-style: none;
 	text-indent: -30px;
 }
@@ -57,7 +75,15 @@ ul{
 	display: block;
 }
 
-/* div element within the header element on the index.html page */
+#items {
+	text-indent: -80px;
+}
+
+#deleteA {
+	display: block;
+}
+
+ div element within the header element on the index.html page 
 /* div element which is dynamically created by JavaScript to display data on the addItem.html page */
 div{
 	margin-bottom: 5px;
@@ -77,6 +103,7 @@ div>ul {
 /* li element within a ul element on the addItem.html page */
 li {
 	margin: 3px 0px;
+	list-style: none;
 }
 
 /* textarea element with an id="comments" on the addItem.html page  */

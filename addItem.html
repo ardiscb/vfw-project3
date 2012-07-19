@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Author: Courtney Ardis 
-Project: Web App Part 2
+Project: Web App Part 3
 Term: 1207
 -->
 <html>
@@ -12,7 +12,7 @@ Term: 1207
 		<meta name="robots" content="noindex, nofollow" />
 		<meta name="viewport" content="user-scalable=no, width=device-width, target-densitydpi=device-dpi" />
 		<title>Add Comic to Collection</title>
-		<link href="css/styles.css" rel="stylesheet" />		
+		<link href="css/styles.css" rel="stylesheet" />
 	</head>
 	<body>
 		<h1 id="addComic">Add Comic</h1>
@@ -20,16 +20,18 @@ Term: 1207
 		<form action="#" method="post" id="comicForm">
 			<fieldset>
 				<legend>Comic Information</legend>
-					<ul>
+					<ul class="mainUl">
 						<!-- Comic Information Inputs -->
-						<li><label for="comicTitle">Title of Comic:</label><input type="text" id="comicTitle" /></li>
+						<li id="required">*required fields</li>
+						<ul id="errors"></ul>
+						<li><label for="comicTitle">*Title of Comic:</label><input type="text" id="comicTitle" /></li>
 						<li><label for="seriesTitle">Title of Series:</label><input type="text" id="seriesTitle" /></li>
-						<li><label for="issueNum">Issue Number:</label><input type="text" id="issueNum" /></li>
+						<li><label for="issueNum">*Issue Number:</label><input type="text" id="issueNum" /></li>
 						<li><label for="dateReleased">Date Released:</label><input type="date" id="dateReleased" /></li>
-						<li><label for="publisher">Publisher:</label><input type="text" id="publisher" /></li>
+						<li><label for="publisher">*Publisher:</label><input type="text" id="publisher" /></li>
 						<li><label for="rateIssue">Rate Issue (0-5 Scale):</label><input type="range" id="rateIssue" min="0" max="5" /></li>
 		 				<!--Genre Dropdown Menu-->
-		 				<li id="select"><label for="genre">Select Genre:</label></li> 
+		 				<li id="select"><label for="genre">*Select Genre:</label></li> 
 						<!--REPLACED so JavaScript can create the menu dynamically
 							<select id="genre">
 								<option>Superhero</option>
@@ -41,7 +43,7 @@ Term: 1207
 							</select>
 						-->				
 						<li>Illustration Style:
-							<ul>
+							<ul class="mainUl">
 								<!-- Illustration Radio Buttons -->
 								<li class="illStyle"><input type="radio" id="fullColor" value="Full Color" name="illStyle" /><label for="fullColor">Full Color</label></li>
 								<li class="illStyle"><input type="radio" id="blackWhite" value="Black &amp; White" name="illStyle" /><label for="blackWhite">Black &amp; White</label></li>
